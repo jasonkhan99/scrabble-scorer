@@ -39,5 +39,12 @@ namespace Scrabble.Tests
       Assert.AreEqual(newValue.Score, 10);
     }
 
+    [TestMethod]
+    public void GetValueLetters_ReturnsValue_String()
+    {
+      Value newValue = new Value("abcd", 10);
+      Assert.AreEqual(newValue.Letters, "abcd");
+    }
+
   }
 }
