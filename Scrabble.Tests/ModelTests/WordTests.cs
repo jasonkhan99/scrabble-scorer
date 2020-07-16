@@ -46,5 +46,21 @@ namespace Scrabble.Tests
       Assert.AreEqual(newValue.Letters, "abcd");
     }
 
+    [TestMethod]
+    public void GetLetterScore_ReturnsScore_Int()
+    {
+      Word newWord = new Word("dog");
+      string letter = "d";
+      Assert.AreEqual(newWord.ScoreLetter("d"), 2);
+    }
+
+    [TestMethod]
+    public void GetWordScore_ReturnsScore_Int()
+    {
+      Word newWord = new Word("dog");
+      Assert.AreEqual(5, newWord.ScoreWord());
+    }
+
+
   }
 }
