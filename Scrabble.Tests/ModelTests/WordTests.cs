@@ -28,7 +28,7 @@ namespace Scrabble.Tests
     [TestMethod]
     public void ValueConstructor_CreatesInstanceOfClass_Value()
     {
-      Value newValue = new Value();
+      Value newValue = new Value("abcd", 10);
       Assert.AreEqual(typeof(Value), newValue.GetType());
     }
 
