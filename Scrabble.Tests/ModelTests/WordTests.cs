@@ -49,7 +49,6 @@ namespace Scrabble.Tests
     [TestMethod]
     public void GetLetterScore_ReturnsScore_Int()
     {
-      string letter = "d";
       Assert.AreEqual(Word.ScoreLetter("d"), 2);
     }
 

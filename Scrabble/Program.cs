@@ -7,7 +7,10 @@ namespace Scrabble {
   {
     public static void Main()
     {
-
+      Console.WriteLine("Enter your word");
+      Word inputString = new Word(Console.ReadLine());
+      int outputScore = inputString.ScoreWord();
+      Console.WriteLine(outputScore);
     }
   }
 }
