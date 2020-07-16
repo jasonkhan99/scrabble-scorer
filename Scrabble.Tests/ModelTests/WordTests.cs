@@ -49,9 +49,8 @@ namespace Scrabble.Tests
     [TestMethod]
     public void GetLetterScore_ReturnsScore_Int()
     {
-      Word newWord = new Word("dog");
       string letter = "d";
-      Assert.AreEqual(newWord.ScoreLetter("d"), 2);
+      Assert.AreEqual(Word.ScoreLetter("d"), 2);
     }
 
     [TestMethod]
@@ -60,7 +59,6 @@ namespace Scrabble.Tests
       Word newWord = new Word("dog");
       Assert.AreEqual(5, newWord.ScoreWord());
     }
-
 
   }
 }

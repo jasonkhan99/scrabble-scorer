@@ -11,7 +11,7 @@ namespace Scrabble.Models
       UserWord = inputWord;
     }
 
-    public int ScoreLetter(string singleLetter)
+    public static int ScoreLetter(string singleLetter)
     {
       Value line1 = new Value ("aeioulnrst", 1);
       Value line2 = new Value ("dg", 2);
@@ -33,7 +33,12 @@ namespace Scrabble.Models
 
     public int ScoreWord()
     {
-      return 0;
+      int outputScore = 0;
+      for (int i = 0; i < UserWord.Length; i++)
+      {
+        outputScore += Word.ScoreLetter(UserWord[i].ToString());
+      }
+      return outputScore;
     }
   }
 }
